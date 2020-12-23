@@ -17,7 +17,9 @@ emojis = [":onay:756165714020270211",
           ":kodluyoruzaqua:778245370408861716",
           ":kodluyoruzblue:778245370073448459",
           ":kodluyoruzpink:778245370621853706",
-          ":kodluyoruzblack:778245370332708904"]
+          ":kodluyoruzblack:778245370332708904",
+          ":kodluyoruzred:778245371066843147",
+          "a:ucanroket:778244458377510912"]
 
 @bot.event
 async def on_ready():
@@ -25,7 +27,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if(message.channel.id == 727896197624234034 or message.channel.id == 727896370845057055):
+    if(message.channel.id == 727896197624234034 or message.channel.id == 727896370845057055 or message.channel.id == 763038211890216980):
+        random.shuffle(emojis)
         for i in emojis:
             await message.add_reaction(i)
     else:
