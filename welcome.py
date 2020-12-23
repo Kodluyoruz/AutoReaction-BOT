@@ -22,6 +22,8 @@ emojis = [":onay:756165714020270211",
 @bot.event
 async def on_ready():
     print("Kodluyoruz BOT Aktif Hale Geldi!!")
+    registerChannel = bot.get_channel(755411760386670693)
+    await registerChannel.send("Merhabalar! Ben Kodluyoruz BOT! Kayd olabilir miyim lütfen?")
 
 @bot.event
 async def on_message(message):
